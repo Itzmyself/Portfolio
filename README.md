@@ -1,6 +1,6 @@
 # Shyam Kumar P — Personal Portfolio
 
-A dark-themed personal portfolio website built with pure HTML, CSS, and vanilla JavaScript.
+A personal portfolio website built with pure HTML and CSS.
 
 ## Overview
 
@@ -46,7 +46,6 @@ Then open `http://localhost:8000` in your browser.
 
 - HTML5
 - CSS3 (Grid, Flexbox, Custom Properties, Keyframe Animations)
-- Vanilla JavaScript (ES6+)
 - Google Fonts — DM Serif Display & Syne
 
 ## Contact
