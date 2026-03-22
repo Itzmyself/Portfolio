@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Home — Shyam Kumar P</title>
+  <link rel="stylesheet" href="main style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="home-page">
+
+  <nav class="topnav">
+    <span class="nav-logo">Portfolio</span>
+    <div class="nav-links">
+      <a href="home.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="home-wrap">
+
+    <!-- LEFT: Text -->
+    <div class="h-text">
+      <p class="h-tag">B.Tech · AI &amp; Data Science</p>
+      <h1 class="h-name">Shyam<em>Kumar P</em></h1>
+      <p class="h-univ">Amrita Vishwa Vidyapeetham, Kerala</p>
+      <div class="h-btns">
+        <a href="projects.html" class="btn btn-glow"><span>View Projects</span></a>
+        <a href="contact.html"  class="btn btn-glow">Get In Touch</a>
+      </div>
+      <div class="h-stats">
+        <div>
+          <span class="stat-n cgpa-stat" id="cgpa-counter">0</span>
+          <span class="stat-l">CGPA</span>
+        </div>
+        <div class="stat-div"></div>
+        <div>
+          <span class="stat-n d1">3+</span>
+          <span class="stat-l">Projects</span>
+        </div>
+        <div class="stat-div"></div>
+        <div>
+          <span class="stat-n d2">1</span>
+          <span class="stat-l">Publication</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Full-height photo -->
+    <div class="h-visual">
+      <img src="assets/profile.jpeg" alt="Shyam Kumar P" class="h-avatar"/>
+    </div>
+
+  </div>
+
+  <script>
+    /* ── CGPA count-up ── */
+    const cgpaEl = document.getElementById('cgpa-counter');
+    const target = 9.4;
+    const duration = 1400;
+    const start = performance.now();
+    function animateCount(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      cgpaEl.textContent = (eased * target).toFixed(1);
+      if (progress < 1) requestAnimationFrame(animateCount);
+    }
+    setTimeout(() => requestAnimationFrame(animateCount), 800);
+  </script>
+
+</body>
+</html>
