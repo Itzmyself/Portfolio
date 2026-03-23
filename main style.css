@@ -246,6 +246,15 @@ ul {
     margin-bottom: 2.5rem;
 }
 
+.sh-idx {
+    font-size: 0.65rem;
+    color: var(--a);
+    letter-spacing: 0.25em;
+    display: block;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+
 .sh-title {
     font-family: var(--ff);
     font-size: clamp(2rem, 5vw, 3.2rem);
@@ -310,6 +319,27 @@ ul {
     gap: 1rem;
     position: relative;
     z-index: 1;
+}
+
+.f-links {
+    display: flex;
+    gap: 0.15rem;
+}
+
+.f-links a {
+    padding: 0.32rem 0.7rem;
+    font-size: 0.75rem;
+    color: var(--txt3);
+    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.25s, background 0.25s;
+}
+
+.f-links a:hover {
+    color: var(--a);
+    background: rgba(var(--ar), 0.06);
 }
 
 .f-copy {
@@ -399,6 +429,16 @@ ul {
     font-style: italic;
     color: var(--a);
     display: block;
+}
+
+.e-role {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--txt2);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 1.2rem 0 2.2rem;
+    animation: rise 0.9s var(--ease) 0.5s both;
 }
 
 .e-btn {
@@ -505,6 +545,20 @@ body.home-page {
     animation: float-in 0.7s var(--ease) 0.3s both;
 }
 
+.h-sub {
+    font-size: 0.93rem;
+    color: var(--txt2);
+    margin-bottom: 2rem;
+    max-width: 460px;
+    line-height: 1.85;
+    animation: float-in 0.7s var(--ease) 0.4s both;
+}
+
+.h-sub strong {
+    color: var(--txt);
+    font-weight: 600;
+}
+
 .h-btns {
     display: flex;
     gap: 0.8rem;
@@ -589,6 +643,25 @@ body.home-page {
 /* ============================================
    ABOUT PAGE
    ============================================ */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.bio p {
+    color: var(--txt2);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+    font-size: 0.93rem;
+}
+
+.bio strong {
+    color: var(--txt);
+    font-weight: 600;
+}
 
 /* Hero header */
 .about-hero {
@@ -905,6 +978,31 @@ body.home-page {
     color: var(--a);
     font-weight: 700;
     letter-spacing: 0.08em;
+}
+
+.cert-view-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.62rem;
+    color: var(--a);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-left: auto;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cert-card:hover .cert-view-hint {
+    opacity: 1;
+}
+
+.cert-view-hint svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--a);
+    fill: none;
+    stroke-width: 2;
 }
 
 /* Cert link buttons */
@@ -1385,6 +1483,160 @@ body.home-page {
 }
 
 
+/* ============================================
+   OLD ABOUT PAGE STYLES (kept for compatibility)
+   ============================================ */
+
+.details {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.d-lbl {
+    font-size: 0.62rem;
+    color: var(--txt3);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    min-width: 90px;
+}
+
+.d-val {
+    font-size: 0.85rem;
+    color: var(--txt2);
+    font-weight: 600;
+}
+
+.d-val.open {
+    color: #00ff88;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.d-val.open::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ff88;
+    animation: blink 2s ease-in-out infinite;
+}
+
+.skills-h {
+    font-family: var(--ff);
+    font-size: 1.15rem;
+    margin-bottom: 1.1rem;
+    color: var(--txt);
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.skill-card {
+    background: var(--s2);
+    border: 1px solid var(--brd);
+    border-radius: 6px;
+    padding: 0.85rem;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.skill-card:hover {
+    border-color: var(--brd2);
+    transform: translateY(-2px);
+}
+
+.sk-name {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--txt2);
+    font-weight: 600;
+    margin: 0.2rem 0 0.55rem;
+}
+
+.sk-bar {
+    height: 2px;
+    background: var(--s1);
+    border-radius: 2px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tags span {
+    background: var(--s2);
+    border: 1px solid var(--brd);
+    color: var(--txt3);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.22rem 0.6rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: color 0.25s, border-color 0.25s;
+}
+
+.tags span:hover {
+    color: var(--a);
+    border-color: rgba(var(--ar), 0.3);
+}
+
+.certs {
+    margin-top: 2rem;
+}
+
+.certs-h {
+    font-family: var(--ff);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: var(--txt);
+}
+
+.cert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--brd);
+}
+
+.cert-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--a);
+    flex-shrink: 0;
+    margin-top: 0.45rem;
+    box-shadow: 0 0 6px var(--a);
+}
+
+.cert-name {
+    font-size: 0.85rem;
+    color: var(--txt2);
+    font-weight: 600;
+}
+
+.cert-org {
+    font-size: 0.73rem;
+    color: var(--txt3);
+    margin-top: 0.1rem;
+}
+
 
 /* ============================================
    RESPONSIVE — TABLET (max 900px)
@@ -1392,17 +1644,27 @@ body.home-page {
 
 @media (max-width: 900px) {
 
+    .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
     .home-wrap {
+        grid-template-columns: 1fr;
         min-height: auto;
-        padding: 2rem 0;
+        padding: 0;
+        overflow-y: auto;
     }
 
     .h-visual {
-        display: none;
+        display: block;
+        width: 100%;
+        height: 320px;
+        order: -1;
+    }
+
+    .h-text {
+        padding: 2rem 1.5rem 3rem;
     }
 
     .proj-grid {
@@ -1446,6 +1708,10 @@ body.home-page {
         padding: 2.5rem 1.2rem 2rem;
     }
 
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
     .skill-grid-new {
         grid-template-columns: 1fr;
     }
@@ -1456,6 +1722,10 @@ body.home-page {
 
     .cert-grid {
         grid-template-columns: 1fr;
+    }
+
+    .h-visual {
+        height: 240px;
     }
 
     .site-footer {
